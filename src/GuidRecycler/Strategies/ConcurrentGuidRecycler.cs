@@ -4,7 +4,7 @@ using GuidRecycler.Interfaces;
 namespace GuidRecycler.Strategies;
 
 /// <summary>
-/// A thread-safe guid recycler implementation
+/// A thread-safe guid recycler implementation.
 /// </summary>
 public class ConcurrentGuidRecycler : IGuidRecycler
 {
@@ -12,7 +12,7 @@ public class ConcurrentGuidRecycler : IGuidRecycler
 
     /// <summary>
     /// A thread safe way of recycling a
-    /// guid to the recycle bin
+    /// guid to the recycle bin.
     /// </summary>
     /// <param name="guid">The guid to recycle.</param>
     public void Recycle(Guid guid)
@@ -23,7 +23,7 @@ public class ConcurrentGuidRecycler : IGuidRecycler
     /// <summary>
     /// A thread safe way of receiving a recycled (or new) guid.
     /// </summary>
-    /// <returns>The recycled or new guid</returns>
+    /// <returns>The recycled or new guid.</returns>
     public Guid GetGuid()
     {
         return _queue.TryDequeue(out var guid) ? guid : Guid.NewGuid();
