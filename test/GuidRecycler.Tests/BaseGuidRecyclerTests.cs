@@ -4,15 +4,10 @@ using GuidRecycler.Interfaces;
 
 namespace GuidRecycler.Tests;
 
-public abstract class BaseGuidRecyclerTests<T>
+public abstract class BaseGuidRecyclerTests<T>(Func<T> sutFactory)
     where T : class, IGuidRecycler
 {
-    private readonly Func<T> _sutFactory;
-
-    public BaseGuidRecyclerTests(Func<T> sutFactory)
-    {
-        _sutFactory = sutFactory;
-    }
+    private readonly Func<T> _sutFactory = sutFactory;
 
     [Fact]
     public void GetGuid_Returns_FiFo()
