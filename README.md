@@ -16,6 +16,9 @@ GuidRecycler
 ## What is it?
 GuidRecycler is a library that allows you to recycle guids. It is a simple concept.
 
+## Why was it made?
+Every year, billions of guids are produced. The vast majority of those is not used. They are thrown away. Wasted. In current times, it's important to do anything in our power to reduce our impact on the planet. By recycling guids, we reduce the amount of power needed to get an unused one. We also delay, as much as possible, the time when we will run out of guids.
+
 ## Installation
 GuidRecycler is available as a [NuGet package](https://www.nuget.org/packages/GuidRecycler/).
 ```powershell
